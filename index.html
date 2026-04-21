@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Focus Mode One — Rechtliches</title>
-  <meta name="description" content="Rechtliche Informationen zu Focus Mode One — Impressum, AGB und Datenschutzerklärung." />
-  <link rel="canonical" href="datenschutz.html" />
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <title>Focus Mode One — Legal · Rechtliches</title>
+  <meta name="description" content="Legal information for Focus Mode One — imprint, terms, privacy. Rechtliche Informationen — Impressum, AGB, Datenschutz." />
+  <link rel="icon" type="image/png" href="assets/icon_transparent.png" />
+  <link rel="apple-touch-icon" href="assets/icon_transparent.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@400;450;500&display=swap" />
   <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
       min-height: 100vh;
       display: grid;
       place-items: center;
       background: #0E0E10;
       font-family: 'Geist', -apple-system, sans-serif;
       color: #8E8E9E;
-      text-align: center;
-      padding: 24px;
+      padding: 32px 20px;
+    }
+    .wrapper { text-align: center; max-width: 720px; width: 100%; }
+    .brand {
+      width: 56px;
+      height: 56px;
+      margin: 0 auto 20px;
+      display: block;
     }
     h1 {
       font-family: 'Fraunces', Georgia, serif;
       font-weight: 400;
-      font-size: 36px;
+      font-size: 40px;
       color: #F0EFE8;
-      margin: 0 0 8px;
+      margin: 0 0 10px;
       letter-spacing: -0.02em;
     }
     h1 em {
@@ -36,38 +41,98 @@
       color: #8840FF;
       font-weight: 300;
     }
-    p { margin: 0 0 28px; font-size: 15px; }
-    .links {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      max-width: 640px;
+    .tagline {
+      font-size: 14px;
+      color: #5A5A6E;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 36px;
     }
-    a {
-      display: inline-block;
-      padding: 11px 22px;
-      border-radius: 100px;
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      text-align: left;
+    }
+    @media (max-width: 560px) {
+      .columns { grid-template-columns: 1fr; }
+    }
+    .col {
+      background: #18181C;
+      border: 1px solid rgba(240,239,232,0.08);
+      border-radius: 16px;
+      padding: 22px 22px 18px;
+    }
+    .col__label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: #5A5A6E;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .col__heading {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 20px;
+      color: #F0EFE8;
+      margin-bottom: 14px;
+      font-weight: 400;
+    }
+    .col__links { display: flex; flex-direction: column; gap: 4px; }
+    .col__links a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      border-radius: 10px;
       text-decoration: none;
       font-size: 14px;
-      font-weight: 500;
-      transition: all 0.2s ease;
+      color: #F0EFE8;
+      transition: background 0.15s ease;
     }
-    a.primary { background: #8840FF; color: #F0EFE8; }
-    a.primary:hover { background: #A066FF; }
-    a.secondary { background: #222228; color: #F0EFE8; border: 1px solid rgba(240,239,232,0.12); }
-    a.secondary:hover { background: #2A2A32; }
+    .col__links a:hover { background: #222228; }
+    .col__links a::after {
+      content: '→';
+      color: #5A5A6E;
+      font-size: 13px;
+    }
+    .col__links a:hover::after { color: #8840FF; }
+    .footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #5A5A6E;
+    }
   </style>
 </head>
 <body>
-  <div>
+  <div class="wrapper">
+    <img class="brand" src="assets/icon_transparent.png" alt="Focus Mode One" />
     <h1>Focus Mode One<em>.</em></h1>
-    <p>Rechtliche Informationen</p>
-    <div class="links">
-      <a class="primary" href="datenschutz.html">Datenschutzerklärung</a>
-      <a class="secondary" href="agb.html">AGB</a>
-      <a class="secondary" href="impressum.html">Impressum</a>
+    <p class="tagline">Legal · Rechtliches</p>
+
+    <div class="columns">
+      <div class="col" lang="en">
+        <div class="col__label">English</div>
+        <div class="col__heading">Legal notices</div>
+        <div class="col__links">
+          <a href="imprint.html">Imprint</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col" lang="de">
+        <div class="col__label">Deutsch</div>
+        <div class="col__heading">Rechtliche Hinweise</div>
+        <div class="col__links">
+          <a href="impressum.html">Impressum</a>
+          <a href="agb.html">AGB</a>
+          <a href="datenschutz.html">Datenschutzerklärung</a>
+        </div>
+      </div>
     </div>
+
+    <p class="footer">© 2026 Riverland International GmbH</p>
   </div>
 </body>
 </html>

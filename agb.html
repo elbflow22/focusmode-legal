@@ -11,8 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=Geist:wght@400;450;500;600&display=swap" />
 
-  <link rel="icon" type="image/png" href="assets/icon.png" />
-  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="icon" type="image/png" href="assets/icon_transparent.png" />
+  <link rel="apple-touch-icon" href="assets/icon_transparent.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
@@ -20,13 +20,17 @@
   <header class="site-header">
     <div class="site-header__inner">
       <a href="index.html" class="site-header__brand" aria-label="Focus Mode One">
-        <img src="assets/icon.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;vertical-align:middle;margin-right:10px;display:inline-block" />
+        <img src="assets/icon_transparent.png" alt="" width="28" height="28" style="width:28px;height:28px;border-radius:7px;vertical-align:middle;margin-right:10px;display:inline-block" />
         Focus Mode One
       </a>
       <nav class="site-header__nav" aria-label="Rechtliches">
         <a href="impressum.html">Impressum</a>
         <a href="agb.html" class="is-active">AGB</a>
         <a href="datenschutz.html">Datenschutz</a>
+        <span style="display:inline-flex;gap:2px;margin-left:10px;padding-left:10px;border-left:1px solid rgba(240,239,232,0.12);align-self:center">
+          <a href="agb.html" style="padding:4px 8px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:0.04em;color:#8840FF;background:rgba(136,64,255,0.12);text-decoration:none">DE</a>
+          <a href="terms.html" style="padding:4px 8px;border-radius:6px;font-size:12px;font-weight:600;letter-spacing:0.04em;color:#5A5A6E;text-decoration:none">EN</a>
+        </span>
       </nav>
     </div>
   </header>
