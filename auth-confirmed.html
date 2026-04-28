@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Email Confirmed — Focus Mode One</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: #f5f1e8;
+      font-family: 'DM Sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .checkmark {
+      font-family: 'DM Mono', monospace;
+      color: #8840FF;
+      font-size: 48px;
+      line-height: 1;
+      margin-bottom: 32px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 36px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+      color: #f5f1e8;
+    }
+
+    p {
+      font-size: 17px;
+      color: #a8a29a;
+      margin-bottom: 12px;
+    }
+
+    .hint {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: #6b6660;
+      margin-top: 40px;
+      letter-spacing: 0.02em;
+    }
+
+    .brand {
+      font-family: 'DM Mono', monospace;
+      font-size: 12px;
+      color: #6b6660;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 64px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+      .checkmark {
+        font-size: 40px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="checkmark" aria-hidden="true">✓</div>
+    <h1>Email confirmed</h1>
+    <p>Open the Focus Mode app on your phone to sign in.</p>
+    <p class="hint">You can close this tab.</p>
+    <div class="brand">Focus Mode One</div>
+  </main>
+</body>
+</html>
