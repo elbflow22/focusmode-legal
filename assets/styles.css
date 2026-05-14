@@ -196,30 +196,22 @@ body::before {
   padding: 96px 32px 48px;
 }
 
+/* Eyebrow — matches focusmode.one landing's eyebrow pattern: simple
+   uppercase Geist 600, no pill, no glyph. Color modifiers available
+   per accent (--eos / --hermes / --athena). Default reads as quiet
+   metadata so the title carries the visual weight on legal pages. */
 .page-hero__eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  border-radius: 100px;
-  background: rgba(255, 140, 66, 0.12);
-  border: 1px solid rgba(255, 140, 66, 0.22);
-  color: var(--eos);
+  display: inline-block;
   font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 24px;
+  color: var(--text-meta);
+  margin-bottom: 22px;
 }
-
-.page-hero__eyebrow::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--eos);
-  box-shadow: var(--glow-eos);
-}
+.page-hero__eyebrow--eos { color: var(--eos); }
+.page-hero__eyebrow--hermes { color: var(--hermes); }
+.page-hero__eyebrow--athena { color: var(--athena); }
 
 .page-hero__title {
   font-family: 'Fraunces', Georgia, serif;
