@@ -68,6 +68,24 @@
       letter-spacing: 0.02em;
     }
 
+    .btn {
+      display: none;
+      margin-top: 28px;
+      padding: 14px 28px;
+      background-color: #8840FF;
+      color: #f5f1e8;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn:hover {
+      background-color: #7433e0;
+    }
+
     .brand {
       font-family: 'DM Mono', monospace;
       font-size: 12px;
@@ -95,9 +113,38 @@
   <main class="container">
     <div class="checkmark" aria-hidden="true">✓</div>
     <h1>Email confirmed</h1>
-    <p>Open the Focus Mode app on your phone to sign in.</p>
+    <p id="subtitle">Open the Focus Mode app on your phone to sign in.</p>
+    <a id="open-app" class="btn" href="#">Open Focus Mode</a>
     <p class="hint">You can close this tab.</p>
     <div class="brand">Focus Mode One</div>
   </main>
+
+  <script>
+    // Hand off to the mobile app. Supabase has already confirmed the email by
+    // the time this page loads; it appends the auth code to our URL. On mobile
+    // we forward that code to the app's deep link so it can complete the PKCE
+    // session and log the user straight in. On desktop the custom scheme does
+    // nothing, so we just show the "open on your phone" message.
+    (function () {
+      var handoff =
+        'one.focusmode.app://login-callback/' +
+        (window.location.search || '') +
+        (window.location.hash || '');
+      var isMobile = /iphone|ipad|ipod|android/i.test(navigator.userAgent);
+      var btn = document.getElementById('open-app');
+      var subtitle = document.getElementById('subtitle');
+
+      if (isMobile) {
+        btn.setAttribute('href', handoff);
+        btn.style.display = 'inline-block';
+        subtitle.textContent = 'Tap below to finish signing in.';
+        // Auto-attempt the hand-off; the button is the reliable fallback for
+        // browsers that require a user gesture to launch a custom scheme.
+        setTimeout(function () {
+          window.location.href = handoff;
+        }, 600);
+      }
+    })();
+  </script>
 </body>
 </html>
